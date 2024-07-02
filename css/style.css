@@ -1,0 +1,55 @@
+/* style.css */
+
+@import url(font.css);
+
+/* body::-webkit-scrollbar { display: none; } */
+body {
+    font-family: "jf";
+    margin: 0;
+    background: #000;
+
+    overflow: hidden;
+}
+
+body > * {
+    user-select: none;
+}
+
+#bgDiv {
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+}
+
+#bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+
+    z-index: -1;
+}
+
+#btns {
+    position: absolute;
+    left: 2dvw;
+    bottom: 2dvh;
+    z-index: 1;
+
+    display: flex;
+}
+
+#btns > * { margin: 0 0.5dvw; }
+
+#btns > button {
+    font-size: 2rem;
+    padding: 1dvh 1dvw;
+    line-height: 2rem;
+}
+
+#btns > input {
+    width: 10rem;
+}

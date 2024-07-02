@@ -1,0 +1,10 @@
+# .gitignore
+
+.vscode/
+test/
+desktop.ini
+r.ignore
+upload.bat
+
+css/input.css
+ROADMAP.md
