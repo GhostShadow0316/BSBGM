@@ -3,9 +3,10 @@
 # BS BGM: Brawl Stars BGM
 
 > Listen Brawl Stars BGM without opening Brawl Stars
+
 > Play through random music and random backgrounds made list
 
-### Use directly on [https://brawl.hac.rf.gd/BGM/index.html](https://brawl.hac.rf.gd/BGM/index.html)
+### Use directly on [https://brawl.hac.rf.gd/BGM.html](https://brawl.hac.rf.gd/BGM.html)
 
 ### View [CHANGELOG](https://github.com/GhostShadow0316/BSBGM/blob/master/CHANGELOG.md) here
 
