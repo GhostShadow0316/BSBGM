@@ -6,26 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BS BGM</title>
     <link rel="icon" href="">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20240705v1">
 </head>
 <body>
 
-    <audio id="bgm"><source id="bgm-source" type="audio/mp3"></audio>
+    <div id="clock">
+        <p id="hour"></p>
+        <p>:</p>
+        <p id="minute"></p>
+        <p>:</p>
+        <p id="second"></p>
+    </div>
 
     <div id="btns">
         <button id="prev"><strong>&laquo;</strong></button>
         <button id="play">&#x23F5;</button>
         <button id="next"><strong>&raquo;</strong></button>
-        <input  id="vol" type="range" min="0" max="1" step="0.1" value="1">
+        <input  id="vol" type="range" min="0" max="1" step="0.1">
         <!-- <button id="good">👍</button> -->
         <!-- <button id="bad" >👎</button> -->
+    </div>
+
+    <div id="social">
+        <a id="github" href="https://github.com/GhostShadow0316/BSBGM" target="blank_">
+            <img src="static/github.png" alt="GitHub">
+        </a>
     </div>
 
     <div id="bgDiv">
         <img id="bg" alt="bg">
     </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+    <audio id="bgm"><source id="bgm-source" type="audio/mp3"></audio>
+
+    <script src="js/data.js?v=20240705v1"></script>
+    <script src="js/script.js?v=20240705v1"></script>
+    <script src="js/clock.js?v=20240705v1"></script>
 </body>
 </html>

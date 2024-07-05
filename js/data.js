@@ -44,7 +44,6 @@ let bg_list = [
     "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC83MTZoVEFBS1FyU1RnVHFxbjFGNy5wbmcifQ:supercell:zPrC_TFPICZPjXHuf9Wp28BMZCL0pXM8O-COOXSEg7o",
     "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9hNWdLcXA1RXJmc2h3bzdiR042TS5qcGcifQ:supercell:EamC3zHjP37hnn8mfS3pUXnFTVs99hlsmKUDqj19lt0",
     "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9TcktIU1dvMWtuNmJCOThvQnVEdi5qcGcifQ:supercell:MzDicNUWvchFR21An4rPmF-iG4U2wJpsI-qPeKPZnxY",
-    "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC90QnVtcFFtR1BlQkFTRnd3dkVEaS5wbmcifQ:supercell:MQbBBarO5eRngAHHGUkHQ0x-BJxcHBRA9eUvz00s15w",
     "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9OenJVbkdrZTlDMkRBa01kRkVNcy5wbmcifQ:supercell:0bdICRTZDd3wvz3Jzh_8baMMrIsWzEbwrBRgYFPJWEQ",
     "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9BNGJ6U1RKVlM2NFFlN3hSSmVBdC5wbmcifQ:supercell:5p_lCrgghBb1bkcIcN5UqdqUBb-v63WLfOEiQejMPHg",
     "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC96N2VpWXJERXNBNk1aenZlQWM2VS5wbmcifQ:supercell:T0IWJvkqQS_nin24o7pBRkTIPkN-pcCU4aBfZIakwBY",

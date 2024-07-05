@@ -1,7 +1,6 @@
 // script.js
-const last_update = "20240702";
 
-// [ function ]
+// [ FUNCTIONS ]
 
 const delay = (ms=0) => new Promise(res => setTimeout(res, ms));
 
@@ -17,29 +16,18 @@ const shuffle = (array_) => {
     return array_;
 }
 
-// [ init ]
+const set = (key, value) => {
+    localStorage.setItem(key, value);
+    return value
+}
 
-const [wHeight, wWidth] = [document.documentElement.clientHeight, document.documentElement.clientWidth];
-const iLoaded = new CustomEvent("iLoaded");
+const get = (key, default_) => {
+    value = localStorage.getItem(key);
+    if (value == null) { value = set(key, default_); }
+    return value
+}
 
-const bg_elem    = document.getElementById("bg");
-const bgm_elem   = document.getElementById("bgm");
-const bgm_source = document.getElementById("bgm-source");
-
-const btn_div    = document.getElementById("btns");
-const prev_btn   = document.getElementById("prev");
-const play_btn   = document.getElementById("play");
-const next_btn   = document.getElementById("next");
-const vol_btn    = document.getElementById("vol");
-// const good_btn   = document.getElementById("good");
-// const bad_btn    = document.getElementById("bad");
-
-let volume;
-let [bg_i, bgm_i] = [0, 0];
-bg_list  = shuffle(bg_list);
-bgm_list = shuffle(bgm_list);
-
-// [ function ]
+// [] \\
 
 const change_bg = () => {
     path = bg_list[bg_i];
@@ -78,7 +66,30 @@ const prev = () => {
     change_bgm();
 }
 
-// [ events ]
+// [ INIT ]
+
+const [wHeight, wWidth] = [document.documentElement.clientHeight, document.documentElement.clientWidth];
+
+const bg_elem    = document.getElementById("bg");
+const bgm_elem   = document.getElementById("bgm");
+const bgm_source = document.getElementById("bgm-source");
+
+const btn_div    = document.getElementById("btns");
+const prev_btn   = document.getElementById("prev");
+const play_btn   = document.getElementById("play");
+const next_btn   = document.getElementById("next");
+const vol_btn    = document.getElementById("vol");
+// const good_btn   = document.getElementById("good");
+// const bad_btn    = document.getElementById("bad");
+
+let [bg_i, bgm_i] = [0, 0];
+bg_list  = shuffle(bg_list);
+bgm_list = shuffle(bgm_list);
+
+let volume = get("volume", 1);
+bgm_elem.volume = vol_btn.value = volume;
+
+// [ EVENTS ]
 
 bgm_elem.addEventListener("ended", () => {
     bgm_elem.currentTime = 0;
@@ -86,7 +97,8 @@ bgm_elem.addEventListener("ended", () => {
     bgm_elem.play();
 });
 
-// [ controls ]
+// [ CONTROLS ]
+
 play_btn.onclick = () => {
     if (bgm_elem.paused) {
         bgm_elem.play();
@@ -99,14 +111,17 @@ play_btn.onclick = () => {
 
 next_btn.onclick = next;
 prev_btn.onclick = prev;
-vol_btn.onchange = () => { bgm_elem.volume = vol_btn.value; }
+vol_btn.onchange = () => {
+    volume = set("volume", vol_btn.value);
+    bgm_elem.volume = volume;
+}
 
-// [ main ]
+// [ MAIN ]
 
 change_bg();
 change_bgm();
 
-// [ debug ]
+// [ DEBUG ]
 
 console.log(`bg_list:  ${bg_list.length}`);
 console.log(`bgm_list: ${bgm_list.length}`);

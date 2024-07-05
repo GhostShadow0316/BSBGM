@@ -2,9 +2,32 @@
 
 @import url(font.css);
 
+/* [ ANIMATION ] */
+
+@keyframes float1 {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -47%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes float2 {
+    0%   { transform: translate(-50%, -50%); }
+    25%  { transform: translate(-50%, -45%); }
+    50%  { transform: translate(-50%, -50%); }
+    75%  { transform: translate(-50%, -55%); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+/* [ BODY ] */
+
 /* body::-webkit-scrollbar { display: none; } */
 body {
-    font-family: "jf";
     margin: 0;
     background: #000;
 
@@ -12,8 +35,13 @@ body {
 }
 
 body > * {
+    font-family: "jf";
+    color: #fff;
+
     user-select: none;
 }
+
+/* [ BACKGROUND ] */
 
 #bgDiv {
     width: 100dvw;
@@ -31,25 +59,67 @@ body > * {
     min-height: 100%;
 
     z-index: -1;
+
+    /* filter: brightness(50%); */
 }
 
-#btns {
+/* [ DIV ] */
+
+div:not(#bgDiv) {
     position: absolute;
+    z-index: 1;
+}
+
+/* [ BUTTONS ] */
+
+#btns {
+    display: flex;
+
     left: 2dvw;
     bottom: 2dvh;
-    z-index: 1;
-
-    display: flex;
 }
 
 #btns > * { margin: 0 0.5dvw; }
 
+#btns > input { width: 10rem; }
 #btns > button {
     font-size: 2rem;
     padding: 1dvh 1dvw;
     line-height: 2rem;
 }
 
-#btns > input {
-    width: 10rem;
+/* [ SOCIAL LINKS ] */
+
+#social {
+    display: flex;
+
+    right: 1dvw;
+    bottom: 1dvh;
+}
+
+#social > * { margin: 0 0.5dvw; }
+
+#social > a > img {
+    height: 2.5rem;
+    width:  2.5rem;
+}
+
+/* [ CLOCK ] */
+
+#clock {
+    display: flex;
+    gap: 1dvw;
+
+    opacity: 0.8;
+
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation: float1 10s ease-in-out infinite;
+}
+
+#clock > p {
+    font-size: 15rem;
+    -webkit-text-stroke: 0.5rem #000;
 }
