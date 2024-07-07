@@ -2,18 +2,25 @@
 
 @import url(font.css);
 
+/* [ VARIABLE ] */
+
+:root {
+    --clock-font: "jf";
+    --clock-color: #fff;
+    --clock-size: 15dvw;
+    --clock-border-color: #000;
+    --clock-border: 0.5dvw;
+    --clock-opacity: 0.9;
+
+    --btn: 1;
+}
+
 /* [ ANIMATION ] */
 
 @keyframes float1 {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-    50% {
-        transform: translate(-50%, -47%);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
+    0%   { transform: translate(-50%, -50%); }
+    50%  { transform: translate(-50%, -47%); }
+    100% { transform: translate(-50%, -50%); }
 }
 
 @keyframes float2 {
@@ -34,12 +41,7 @@ body {
     overflow: hidden;
 }
 
-body > * {
-    font-family: "jf";
-    color: #fff;
-
-    user-select: none;
-}
+body > * { user-select: none; }
 
 /* [ BACKGROUND ] */
 
@@ -75,33 +77,39 @@ div:not(#bgDiv) {
 #btns {
     display: flex;
 
-    left: 2dvw;
-    bottom: 2dvh;
+    left: 1rem;
+    bottom: 1rem;
 }
 
 #btns > * { margin: 0 0.5dvw; }
 
-#btns > input { width: 10rem; }
+#btns > input { width: 8rem; }
 #btns > button {
+    height: 3rem;
+    width:  3rem;
+
     font-size: 2rem;
-    padding: 1dvh 1dvw;
-    line-height: 2rem;
+    line-height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* [ SOCIAL LINKS ] */
+/* [ LINKS ] */
 
-#social {
+#links {
     display: flex;
 
-    right: 1dvw;
-    bottom: 1dvh;
+    right:  0.5dvw;
+    bottom: 0.5dvh;
 }
 
-#social > * { margin: 0 0.5dvw; }
+#links > * { margin: 0 0.5dvw; }
 
-#social > a > img {
-    height: 2.5rem;
-    width:  2.5rem;
+#links > a > img {
+    height: 1.5rem;
+    width:  1.5rem;
 }
 
 /* [ CLOCK ] */
@@ -110,7 +118,7 @@ div:not(#bgDiv) {
     display: flex;
     gap: 1dvw;
 
-    opacity: 0.8;
+    opacity: var(--clock-opacity);
 
     top: 50%;
     left: 50%;
@@ -120,6 +128,9 @@ div:not(#bgDiv) {
 }
 
 #clock > p {
-    font-size: 15rem;
-    -webkit-text-stroke: 0.5rem #000;
+    color: var(--clock-color);
+    font-family: var(--clock-font);
+
+    font-size: var(--clock-size);
+    -webkit-text-stroke: var(--clock-border) var(--clock-border-color);
 }
