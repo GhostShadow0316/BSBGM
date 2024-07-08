@@ -4,7 +4,25 @@
 
 ---
 
-## 2024/07/07
+## 2024/07/08
+
+> Media keybindings Update
+
+### Added
+
+- keybindings
+- scroll to change volume
+
++ **Features** and **Future Plans** in `README.md`
+
+### Fixed
+
+- **play/pause button** icon won't change if bgm play/paused by system media key
+- `div#clock` move to the right sometimes after a reload
+
+---
+
+## [2024/07/07](https://github.com/GhostShadow0316/BSBGM/tree/184d3ce27733b898dd7a62633146347630075c08)
 
 ### Added
 
